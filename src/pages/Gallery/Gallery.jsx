@@ -8,7 +8,7 @@ const Gallery = ({ setUser }) => {
 
   useEffect(() => {
     
-    axios.get("http://localhost:8000/user/images")
+    axios.get("http://localhost:2500/user/images")
       .then((response) => {
         
         setImages(response.data); 
@@ -24,7 +24,7 @@ const Gallery = ({ setUser }) => {
         <div className="gallery">
           {images.map((image, index) => (
             <div key={index} className="image-container">
-              <img src={`http://localhost:8000${image.url}`} alt={`Gallery item ${index}`} className="company-image"/>
+              <img src={`http://localhost:2500${image.url}`} alt={`Gallery item ${index}`} className="company-image"/>
             </div>
           ))}
         </div>

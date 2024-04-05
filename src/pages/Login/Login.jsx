@@ -6,7 +6,7 @@ const Login = ({ setUser }) => {
   const [password, setPassword] = useState("");
   const loginUser = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8000/user/login", {
+    fetch("http://localhost:2500/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
